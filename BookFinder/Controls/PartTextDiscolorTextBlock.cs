@@ -149,13 +149,11 @@ namespace BookFinder.Controls
                     }
                     else if (DiscolorationLocation == 1)
                     {
-                        bool b = false;
                         if (strings[0].Contains(Discoloration2))
                         {
                             strings2 = strings[0].Split(Discoloration2.ToCharArray(), Discoloration2.Length + 1).ToList();
                             if (strings2.Count == 3)
                             {
-                                b = true;
                                 if (strings2[0] == string.Empty)
                                 {
                                     strings2.RemoveAll(x => x == string.Empty);
@@ -221,10 +219,6 @@ namespace BookFinder.Controls
                                 }
                             }
                         }
-
-
-
-
                     }
 
                     if (strings2.Count == 2)
