@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="SoftwareName" >BookFinder</system:String>
+    
+    <!--自定义按钮tooltip文案-->
+    <system:String x:Key="CloseButtonToolTipContent">WindowClose</system:String>
+    <system:String x:Key="MaxButtonToolTipContent">WindowMaximization</system:String>
+    <system:String x:Key="RestoreButtonToolTipContent">WindowDownRestore</system:String>
+    <system:String x:Key="MinimizeButtonToolTipContent">WindowMinimization</system:String>
+
+    <system:String x:Key="Name" >Name</system:String>
+
+
+    
+
+    <!--书籍分类-->
+    <system:String x:Key="ChildrenBooks">ChildrenBooks</system:String>
+    <system:String x:Key="Animation">Animation</system:String>
+    <system:String x:Key="Philosophy">Philosophy</system:String>
+    <system:String x:Key="Medicine">Medicine</system:String>
+    <system:String x:Key="Economy">Economy</system:String>
+    <system:String x:Key="Military">Military</system:String>
+    <system:String x:Key="Geography">Geography</system:String>
+    <system:String x:Key="MathematicalScience">MathematicalScience</system:String>
+    <system:String x:Key="IndustrialTechnology">IndustrialTechnology</system:String>
+    <system:String x:Key="AgriculturalScience">AgriculturalScience</system:String>
+    <system:String x:Key="PoliticsAndLaw">PoliticsAndLaw</system:String>
+    <system:String x:Key="Grography">Grography</system:String>
+    <system:String x:Key="Grammar">Grammar</system:String>
+    <system:String x:Key="Science">Science</system:String>
+    <system:String x:Key="Education">Education</system:String>
+    <system:String x:Key="PhysicalEducation">PhysicalEducation</system:String>
+    <system:String x:Key="EnvironmentalScience">EnvironmentalScience</system:String>
+    <system:String x:Key="TrafficAndTransportation">TrafficAndTransportation</system:String>
+    <system:String x:Key="AviationAndAerospace">AviationAndAerospace</system:String>
+    <system:String x:Key="Astronomy">Astronomy</system:String>
+    <system:String x:Key="Bioscience">Bioscience</system:String>
+    <system:String x:Key="Art">Art</system:String>
+    <system:String x:Key="Emotion">Emotion</system:String>
+</ResourceDictionary>

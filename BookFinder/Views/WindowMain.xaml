@@ -1,0 +1,22 @@
+﻿<Page x:Class="BookFinder.Views.WindowMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookFinder.Views"
+        xmlns:behavior="http://schemas.microsoft.com/xaml/behaviors"
+        x:Name="WindowMainPage"
+        mc:Ignorable="d"
+        Title="WindowMain" Height="Auto" Width="Auto" DataContext="{Binding Source={StaticResource Locator},Path=WindowMainDataContext}">
+    <behavior:Interaction.Triggers>
+        <behavior:EventTrigger EventName="Loaded">
+            <behavior:InvokeCommandAction Command="{Binding WindowMainLoadeCommand}" CommandParameter="{Binding ElementName=WindowMainPage}"/>
+        </behavior:EventTrigger>
+    </behavior:Interaction.Triggers>
+   
+    <Grid Background="Red">
+        <ListView Style="{StaticResource ListViewStyle_Main}" ItemsSource="{Binding Books,Mode=OneWay}">
+        </ListView>
+
+    </Grid>
+</Page>

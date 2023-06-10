@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookFinder", "BookFinder\BookFinder.csproj", "{ECD7C9B0-D451-4021-890E-9AC20082559D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECD7C9B0-D451-4021-890E-9AC20082559D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECD7C9B0-D451-4021-890E-9AC20082559D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECD7C9B0-D451-4021-890E-9AC20082559D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECD7C9B0-D451-4021-890E-9AC20082559D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C23D101-722F-4F69-97EC-D4DF0CE70D04}
+	EndGlobalSection
+EndGlobal

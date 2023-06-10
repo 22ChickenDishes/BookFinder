@@ -1,0 +1,37 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="SoftwareName" >书籍查找</system:String>
+    <!--自定义按钮tooltip文案-->
+    <system:String x:Key="CloseButtonToolTipContent">窗口关闭</system:String>
+    <system:String x:Key="MaxButtonToolTipContent">窗口最大化按钮</system:String>
+    <system:String x:Key="RestoreButtonToolTipContent">窗口向下还原</system:String>
+    <system:String x:Key="MinimizeButtonToolTipContent">窗口最小化</system:String>
+
+    <system:String x:Key="Name" >名字</system:String>
+
+    <!--书籍分类-->
+    <system:String x:Key="ChildrenBooks">儿童读物</system:String>
+    <system:String x:Key="Animation">动漫</system:String>
+    <system:String x:Key="Philosophy">哲学</system:String>
+    <system:String x:Key="Medicine">医学</system:String>
+    <system:String x:Key="Economy">经济</system:String>
+    <system:String x:Key="Military">军事</system:String>
+    <system:String x:Key="Geography">地理</system:String>
+    <system:String x:Key="MathematicalScience">数理科学</system:String>
+    <system:String x:Key="IndustrialTechnology">工业技术</system:String>
+    <system:String x:Key="AgriculturalScience">农业科学</system:String>
+    <system:String x:Key="PoliticsAndLaw">政法</system:String>
+    <system:String x:Key="Grography">地理</system:String>
+    <system:String x:Key="Grammar">文学</system:String>
+    <system:String x:Key="Science">科学</system:String>
+    <system:String x:Key="Education">教育</system:String>
+    <system:String x:Key="PhysicalEducation">体育</system:String>
+    <system:String x:Key="EnvironmentalScience">环境科学</system:String>
+    <system:String x:Key="TrafficAndTransportation">交通运输</system:String>
+    <system:String x:Key="AviationAndAerospace">航空航天</system:String>
+    <system:String x:Key="Astronomy">天文学</system:String>
+    <system:String x:Key="Bioscience">生物科学</system:String>
+    <system:String x:Key="Art">艺术</system:String>
+    <system:String x:Key="Emotion">情感</system:String>
+</ResourceDictionary>
