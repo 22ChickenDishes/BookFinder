@@ -29,9 +29,9 @@ namespace BookFinder
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string ImageSource = "pack://application:,,,/BookFinder;component/Resources/Images/人工智能.jpg";
+        public string ImageSource = "/BookFinder;component/Resources/Images/人工智能.jpg";
 
-        
+   
         public MainWindow()
         {
            

@@ -9,9 +9,105 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Window}">
                     <Border Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" DataContext="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type Window},AncestorLevel=1},Path=DataContext}">
-                        <Border Background="Transparent" CornerRadius="20" BorderBrush="#C999FF" Margin="10" BorderThickness="2" >
-                            <Grid x:Name="Content_Panel" Background="Transparent">
-                                <AdornerDecorator>
+                        <Border Background="Transparent" CornerRadius="20" BorderBrush="{DynamicResource ColorBrush_Subject_Purple }" Margin="10" BorderThickness="2" >
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                <RowDefinition Height="52"/>
+                                <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.Row="0" Grid.Column="0" Background="{DynamicResource ColorBrush_SubjectColor_DefaultWhite}"/>
+                                <Border Grid.Row="0" Grid.Column="1" Background="{DynamicResource ColorBrush_SubjectColor_DefaultWhite}" BorderBrush="{DynamicResource ColorBrush_Subject_Purple }" BorderThickness="0 0 0 0" CornerRadius="0,20,0,0">
+                                    <Grid>
+                                        <Border HorizontalAlignment="Left"  Margin="40 0 0 0" CornerRadius="16" Background="#E5E5E5" SnapsToDevicePixels="True" Height="32" Width="164">
+                                            <StackPanel Background="Transparent" Height="32" Orientation="Horizontal" SnapsToDevicePixels="True">
+                                                <Button Style="{StaticResource ButtonStyle_BackwardNavigation}"  Width="32" Height="32" Margin="16,0,0,0">
+                                                </Button>
+                                                <Button Style="{StaticResource ButtonStyle_ForwardNavigation}"  Width="32" Height="32" Margin="16,0,0,0">
+                                                </Button>
+                                                <Button Style="{StaticResource ButtonStyle_Refresh}" Width="32"  Height="32" Margin="20,0,0,0">
+                                                </Button>
+                                                
+                                            </StackPanel>
+                                        </Border>
+                                        <Border HorizontalAlignment="Left" Margin="204,0,0,0" Background="#E5E5E5" Height="32" Width="280" CornerRadius="16 16 16 16">
+                                            <Grid Background="Transparent" Height="32" Width="280">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="62"/>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition Width="68"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Button Width="32" HorizontalAlignment="Left" Margin="20,0,0,0" >
+                                                    <Button.Style>
+                                                        <Style TargetType="{x:Type Button}">
+                                                            <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                                            <Setter Property="Template">
+                                                                <Setter.Value>
+                                                                    <ControlTemplate TargetType="{x:Type Button}">
+                                                                        <Border SnapsToDevicePixels="True" Background="#E5E5E5">
+
+                                                                            <Path Stroke="Red" Width="32" Height="32">
+                                                                                <Path.Data>
+                                                                                    <GeometryGroup>
+                                                                                        <PathGeometry Figures="M23,24 30,30"/>
+                                                                                        <EllipseGeometry Center="15,15" RadiusX="12" RadiusY="12"></EllipseGeometry>
+                                                                                    </GeometryGroup>
+                                                                                </Path.Data>
+                                                                            </Path>
+
+                                                                        </Border>
+                                                                    </ControlTemplate>
+                                                                </Setter.Value>
+                                                            </Setter>
+                                                        </Style>
+                                                    </Button.Style>
+                                                </Button>
+                                                <TextBox Grid.Column="1" x:Name="tb" BorderThickness="0" FontWeight="Bold" Tag="123456778"  Foreground="#C999ff" Padding="0 7 0 7" FontSize="12">
+                                                    <TextBox.Resources>
+
+                                                    </TextBox.Resources>
+                                                    <TextBox.Style>
+                                                        <Style  TargetType="{x:Type TextBox}">
+                                                            <Style.Resources>
+                                                                <VisualBrush x:Key="HintText" TileMode="None" Opacity="1" Stretch="None" AlignmentX="Left">
+                                                                    <VisualBrush.Visual>
+                                                                        <TextBlock x:Name="tbx" Text="123456" Foreground="#9C9C9C"/>
+                                                                    </VisualBrush.Visual>
+                                                                </VisualBrush>
+                                                            </Style.Resources>
+                                                            <Setter Property="Background" Value="#E5E5E5"/>
+                                                            <Style.Triggers>
+                                                                <Trigger Property="Text" Value="{x:Null}">
+                                                                    <Setter Property="Background" Value="{StaticResource HintText}"/>
+                                                                </Trigger>
+                                                                <Trigger Property="Text" Value="">
+                                                                    <Setter Property="Background" Value="{StaticResource HintText}"/>
+                                                                </Trigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </TextBox.Style>
+                                                </TextBox>
+
+                                              
+                                                <Button Width="32" Height="32" HorizontalAlignment="Right" Margin="0,0,16,0" Grid.Column="2">
+                                                </Button>
+                                            </Grid>
+                                        </Border>
+                                        <Button Grid.Column="1" Style="{StaticResource ButtonStyle_Close}" Width="32" Height="32" VerticalAlignment="Center" Command="{Binding WindowCloseCommand}" HorizontalAlignment="Right" Margin="0,0,10,0" >
+                                        </Button>
+                                        <Button Grid.Column="1" x:Name="WindowMaxButton" IsHitTestVisible="True"  Command="{Binding WindowMaxCommand,Mode=OneWay}" Style="{StaticResource ButtonStyle_Max}" Visibility="{Binding ElementName=WindowMain,Path=WindowState,Converter={StaticResource MaximumRestoreDisplayReversalConverter}}" Width="32" Height="32" HorizontalAlignment="Right" Margin="0,0,62,0" />
+                                        <Button Grid.Column="1" x:Name="WindowRestoreButton" IsHitTestVisible="True"  Command="{Binding WindowRestoreCommand,Mode=OneWay}" Style="{StaticResource ButtonStyle_Restore}" Visibility="{Binding ElementName=WindowMain,Path=WindowState,Converter={StaticResource MaximumRestoreDisplayConverter}}" Width="32" Height="32" HorizontalAlignment="Right" Margin="0,0,62,0" />
+                                        <Button Grid.Column="1" x:Name="WindowMinimizeButton"  IsHitTestVisible="True" Command="{Binding WindowMinimizeCommand,Mode=OneWay}" Style="{StaticResource ButtonStyle_MinimizeButtonStyle}" Width="32" Height="32" HorizontalAlignment="Right" Margin="0,0,114,0"/>
+                                        
+                                    </Grid>
+                                </Border>
+                                <Border Background="{DynamicResource ColorBrush_SubjectColor_DefaultWhite}" Grid.Column="0" Grid.Row="1" CornerRadius="0,0,0,16" BorderBrush="{DynamicResource ColorBrush_Subject_Purple }" BorderThickness="0 0 1 0">
+                                </Border>
+
+                                <AdornerDecorator Grid.Column="1" Grid.Row="1">
                                     <ContentPresenter/>
                                 </AdornerDecorator>
                             </Grid>

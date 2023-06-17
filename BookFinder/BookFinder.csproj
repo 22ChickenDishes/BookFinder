@@ -189,9 +189,11 @@
     <Compile Include="Controls\PartTextDiscolorTextBlock.cs" />
     <Compile Include="Converts\MaiomumRestoreDisplayReversalConverter.cs" />
     <Compile Include="Converts\MaximumRestoreDisplayConverter.cs" />
+    <Compile Include="Converts\PathToImageSoucreConvert.cs" />
     <Compile Include="EnumTypes\EnumLanguage.cs" />
     <Compile Include="EnumTypes\EnumType.cs" />
     <Compile Include="Helper\CharacterEncodingConversionHelper.cs" />
+    <Compile Include="Helper\CsvFileHelper.cs" />
     <Compile Include="Helper\DBHelper\BookDbManage.cs" />
     <Compile Include="Helper\DBHelper\BorrowingSheetDbManage.cs" />
     <Compile Include="Helper\DBHelper\OrderSheetDbManage.cs" />
@@ -267,6 +269,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Resources\ControlsStyle\TextBlockStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ControlsStyle\TextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\ControlsStyle\WindowStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -307,6 +317,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.manifest" />
+    <None Include="Files\BookFindData.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -336,6 +349,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Images\童话镇.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\爱和自由.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\盗墓笔记系列.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\晴天有时下小猪.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\学会面对.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\CommunityToolkit.Mvvm.8.2.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets" Condition="Exists('..\packages\CommunityToolkit.Mvvm.8.2.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets')" />

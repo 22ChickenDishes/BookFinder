@@ -3,7 +3,11 @@
                     xmlns:TSTConvert="clr-namespace:BookFinder.TemplateSelectors"
                     xmlns:Converts="clr-namespace:BookFinder.Converts"
                     >
-        <TSTConvert:MaximizeAndRestoreTemplateSelector x:Key="MaximizeAndRestoreTemplateSelector"/>
-        <Converts:MaximumRestoreDisplayConverter x:Key="MaximumRestoreDisplayConverter"/>
-        <Converts:MaiomumRestoreDisplayReversalConverter x:Key="MaximumRestoreDisplayReversalConverter"/>
+            <!--最大化按钮和还原按钮转换器-->
+            <Converts:MaximumRestoreDisplayConverter x:Key="MaximumRestoreDisplayConverter"/>
+            <!--最大化按钮和还原按钮转换器，反转-->
+            <Converts:MaiomumRestoreDisplayReversalConverter x:Key="MaximumRestoreDisplayReversalConverter"/>
+            <!--文件路径转ImageSoucre-->
+            <Converts:PathToImageSoucreConvert x:Key="PathToImageSoucreConvert"/>
+    
 </ResourceDictionary>

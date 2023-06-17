@@ -9,15 +9,19 @@
             <local:ViewModelLocator x:Key="Locator"/>
             
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/BookFinder;component/Resources/ControlsStyle/WindowStyle.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/BookFinder;component/Resources/ControlsStyle/ButtonStyle.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/BookFinder;component/Resources/ControlsStyle/ListView.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/BookFinder;component/Resources/ControlsStyle/ListViewItem.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/BookFinder;component/Resources/ControlsStyle/GridViewColumnHeaderStyle.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/BookFinder;component/Resources/Colors.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/BookFinder;component/Resources/Brush.xaml" />
+               
                 <ResourceDictionary Source="pack://application:,,,/BookFinder;component/Resources/ConverterSet.xaml" />
+                <!--<ResourceDictionary Source="pack://application:,,,/BookFinder;component/Resources/ConverterSet.xaml" />-->
                 <ResourceDictionary Source="pack://application:,,,/BookFinder;component/Resources/TemplateLevel.xaml" />
+             
+                <ResourceDictionary Source="pack://application:,,,/BookFinder;component/Resources/ControlsStyle/ButtonStyle.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/BookFinder;component/Resources/ControlsStyle/ListViewItem.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/BookFinder;component/Resources/ControlsStyle/GridViewColumnHeaderStyle.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/BookFinder;component/Resources/ControlsStyle/ListView.xaml" />
+              
+                <ResourceDictionary Source="pack://application:,,,/BookFinder;component/Resources/ControlsStyle/WindowStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
 

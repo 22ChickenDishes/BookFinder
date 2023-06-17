@@ -16,7 +16,7 @@ namespace BookFinder.Models
         /// 书名字
         /// </summary>
         public string BookName { get; set; }
-        [Column("Pay")]
+        [Column("Pay",TypeName ="float")]
         /// <summary>
         /// 支付价格
         /// </summary>

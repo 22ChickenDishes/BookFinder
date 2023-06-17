@@ -35,7 +35,11 @@ namespace BookFinder.ViewModels
             //}
             Books = new ObservableCollection<Book>();
             //IOCContainer.GetSingleton<BookDbManage>().GetAll().ToList();
-            Books.Add(IOCContainer.GetSingleton<BookDbManage>().GetValue("1234567890112"));
+            for (int i = 0; i < 100; i++)
+            {
+                Books.Add(new Book() { Title=i.ToString(),BookCover2= "pack://application:,,,/BookFinder;component/Resources/Images/人工智能.jpg" });
+            }
+            Console.WriteLine(Books[0].ID);
         }
     }
 }

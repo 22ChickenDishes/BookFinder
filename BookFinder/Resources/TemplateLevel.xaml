@@ -1,5 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-
-   
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:TSTConvert="clr-namespace:BookFinder.TemplateSelectors">
+    
+       <!--最大化按钮和还原按钮模板选择器-->
+     <TSTConvert:MaximizeAndRestoreTemplateSelector x:Key="MaximizeAndRestoreTemplateSelector"/>
 </ResourceDictionary>

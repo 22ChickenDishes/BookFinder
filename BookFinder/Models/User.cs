@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -28,22 +29,22 @@ namespace BookFinder.Models
         /// 密码
         /// </summary>
         public string Password { get; set; }
-        [Column("Balance")]
+        [Column("Balance",TypeName ="float")]
         /// <summary>
         /// 余额
         /// </summary>
-        public double Balance { get; set; }
-        [Column("IsMember")]
+        public float Balance { get; set; }
+        [Column("IsMember",TypeName ="bool")]
         /// <summary>
         /// 是否为会员
         /// </summary>
         public bool IsMember { get; set; }
-        [Column("PersonalScore")]
+        [Column("PersonalScore", TypeName = "int")]
         /// <summary>
         /// 个人积分
         /// </summary>
         public int PersonalScore { get; set; }
-        [Column("ReadabilityNumber")]
+        [Column("ReadabilityNumber",TypeName="int")]
         /// <summary>
         /// 可免费试读数
         /// </summary>

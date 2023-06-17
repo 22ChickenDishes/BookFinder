@@ -14,9 +14,10 @@
         </behavior:EventTrigger>
     </behavior:Interaction.Triggers>
    
-    <Grid Background="Red">
-        <ListView Style="{StaticResource ListViewStyle_Main}" ItemsSource="{Binding Books,Mode=OneWay}">
-        </ListView>
-
+    <Grid >
+        <ScrollViewer SnapsToDevicePixels="True" ScrollViewer.CanContentScroll="True">
+            <ListView Style="{StaticResource ListViewStyle_Main}" ItemContainerStyle="{StaticResource ListViewItemStyle}" ItemsSource="{Binding Books,Mode=OneWay}" >
+            </ListView>
+        </ScrollViewer>
     </Grid>
 </Page>

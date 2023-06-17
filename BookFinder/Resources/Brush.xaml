@@ -1,4 +1,15 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <SolidColorBrush x:Key="SubjectColorBrush_Purple" Color="{StaticResource SubjectColor_Purple}"></SolidColorBrush>
+
+    <SolidColorBrush x:Key="ColorBrush_Subject_Purple" Color="{StaticResource Color_Subject_Purple}"></SolidColorBrush>
+
+    <SolidColorBrush x:Key="ColorBrush_SubjectColor_DefaultWhite" Color="{StaticResource Color_SubjectColor_DefaultWhite}"></SolidColorBrush>
+    
+    <SolidColorBrush x:Key="ColorBrush_ButtonGroupContainerBase" Color="{StaticResource Color_ButtonGroupContainerBase}"></SolidColorBrush>
+    
+    <SolidColorBrush x:Key="ColorBrush_GrayContainerButton_AvailableStatus" Color="{StaticResource Color_GrayContainerButton_AvailableStatus}"></SolidColorBrush>
+    
+    <SolidColorBrush x:Key="ColorBrush_GrayContainerButton_UnavailableStatus" Color="{StaticResource Color_GrayContainerButton_UnavailableStatus}"></SolidColorBrush>
+
+    <SolidColorBrush x:Key="ColorBrush_DefaultContainerButton_AvailableStatus" Color="{StaticResource Color_DefaultContainerButton_UnavailableStatus}"></SolidColorBrush>
 </ResourceDictionary>

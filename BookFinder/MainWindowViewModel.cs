@@ -24,6 +24,12 @@ namespace BookFinder
 
         public RelayCommand WindowCloseCommand => new RelayCommand(WindowClose);
 
+        public RelayCommand WindowMaxCommand => new RelayCommand(WindowMax);
+
+        public RelayCommand WindowRestoreCommand => new RelayCommand(WindowRestore);
+
+        public RelayCommand WindowMinimizeCommand => new RelayCommand(WindowMinimize);
+
         public string CurrentPageKey => throw new NotImplementedException();
 
         public void OnViewLoaded(object view)
@@ -37,9 +43,24 @@ namespace BookFinder
             } 
         }
 
-        public void WindowClose()
+        private void WindowClose()
         {
             _View.Close();
+        }
+
+        private void WindowMax()
+        {
+            _View.WindowState = System.Windows.WindowState.Maximized;
+        }
+
+        private void WindowRestore()
+        {
+            _View.WindowState = System.Windows.WindowState.Normal;
+        }
+
+        private void WindowMinimize()
+        {
+            _View.WindowState = System.Windows.WindowState.Minimized;
         }
 
         public void GoBack()

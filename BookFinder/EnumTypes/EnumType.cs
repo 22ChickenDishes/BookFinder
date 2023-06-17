@@ -31,5 +31,6 @@ namespace BookFinder.EnumTypes
         Bioscience,//生物科学
         Art,//艺术
         Emotion,//情感
+        Suspense,//悬疑
     }
 }
