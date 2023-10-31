@@ -15,5 +15,9 @@ namespace BookFinder.Servers
         void NavigateTo(string pagekey);
 
         void NavigateTo(string pagekey, string parameter);
+
+        void NavigatePrevious();
+
+        void NavigateNext();
     }
 }
