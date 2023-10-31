@@ -33,15 +33,37 @@
                                                 
                                             </StackPanel>
                                         </Border>
-                                        <Border HorizontalAlignment="Left" Margin="224,0,0,0" Background="#E5E5E5" Height="32" Width="280" CornerRadius="16 16 16 16">
+                                        <Border HorizontalAlignment="Left" Margin="204,0,0,0" Background="#E5E5E5" Height="32" Width="280" CornerRadius="16 16 16 16">
                                             <Grid Background="Transparent" Height="32" Width="280">
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="62"/>
                                                     <ColumnDefinition />
                                                     <ColumnDefinition Width="68"/>
                                                 </Grid.ColumnDefinitions>
-                                                <Button Width="32" Height="32" Style="{StaticResource ButtonStyle_Search}" HorizontalAlignment="Left" Margin="20,0,0,0" >
-                                                   
+                                                <Button Width="32" HorizontalAlignment="Left" Margin="20,0,0,0" >
+                                                    <Button.Style>
+                                                        <Style TargetType="{x:Type Button}">
+                                                            <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                                            <Setter Property="Template">
+                                                                <Setter.Value>
+                                                                    <ControlTemplate TargetType="{x:Type Button}">
+                                                                        <Border SnapsToDevicePixels="True" Background="#E5E5E5">
+
+                                                                            <Path Stroke="Red" Width="32" Height="32">
+                                                                                <Path.Data>
+                                                                                    <GeometryGroup>
+                                                                                        <PathGeometry Figures="M23,24 30,30"/>
+                                                                                        <EllipseGeometry Center="15,15" RadiusX="12" RadiusY="12"></EllipseGeometry>
+                                                                                    </GeometryGroup>
+                                                                                </Path.Data>
+                                                                            </Path>
+
+                                                                        </Border>
+                                                                    </ControlTemplate>
+                                                                </Setter.Value>
+                                                            </Setter>
+                                                        </Style>
+                                                    </Button.Style>
                                                 </Button>
                                                 <TextBox Grid.Column="1" x:Name="tb" BorderThickness="0" FontWeight="Bold" Tag="123456778"  Foreground="#C999ff" Padding="0 7 0 7" FontSize="12">
                                                     <TextBox.Resources>
@@ -70,7 +92,7 @@
                                                 </TextBox>
 
                                               
-                                                <Button Width="32" Height="32" Style="{StaticResource ButtonStyle_CloseClearOut}" HorizontalAlignment="Right" Margin="0,0,16,0" Grid.Column="2">
+                                                <Button Width="32" Height="32" HorizontalAlignment="Right" Margin="0,0,16,0" Grid.Column="2">
                                                 </Button>
                                             </Grid>
                                         </Border>

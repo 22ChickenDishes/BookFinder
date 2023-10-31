@@ -15,25 +15,25 @@
     
 
     <!--书籍分类-->
-    <system:String x:Key="ChildrenBooks">Children Books</system:String>
+    <system:String x:Key="ChildrenBooks">ChildrenBooks</system:String>
     <system:String x:Key="Animation">Animation</system:String>
     <system:String x:Key="Philosophy">Philosophy</system:String>
     <system:String x:Key="Medicine">Medicine</system:String>
     <system:String x:Key="Economy">Economy</system:String>
     <system:String x:Key="Military">Military</system:String>
     <system:String x:Key="Geography">Geography</system:String>
-    <system:String x:Key="MathematicalScience">Mathematical Science</system:String>
-    <system:String x:Key="IndustrialTechnology">Industrial Technology</system:String>
-    <system:String x:Key="AgriculturalScience">Agricultural Science</system:String>
-    <system:String x:Key="PoliticsAndLaw">Politics And Law</system:String>
+    <system:String x:Key="MathematicalScience">MathematicalScience</system:String>
+    <system:String x:Key="IndustrialTechnology">IndustrialTechnology</system:String>
+    <system:String x:Key="AgriculturalScience">AgriculturalScience</system:String>
+    <system:String x:Key="PoliticsAndLaw">PoliticsAndLaw</system:String>
     <system:String x:Key="Grography">Grography</system:String>
     <system:String x:Key="Grammar">Grammar</system:String>
     <system:String x:Key="Science">Science</system:String>
     <system:String x:Key="Education">Education</system:String>
-    <system:String x:Key="PhysicalEducation">Physical Education</system:String>
-    <system:String x:Key="EnvironmentalScience">Environmental Science</system:String>
-    <system:String x:Key="TrafficAndTransportation">Traffic And Transportation</system:String>
-    <system:String x:Key="AviationAndAerospace">Aviation And Aerospace</system:String>
+    <system:String x:Key="PhysicalEducation">PhysicalEducation</system:String>
+    <system:String x:Key="EnvironmentalScience">EnvironmentalScience</system:String>
+    <system:String x:Key="TrafficAndTransportation">TrafficAndTransportation</system:String>
+    <system:String x:Key="AviationAndAerospace">AviationAndAerospace</system:String>
     <system:String x:Key="Astronomy">Astronomy</system:String>
     <system:String x:Key="Bioscience">Bioscience</system:String>
     <system:String x:Key="Art">Art</system:String>

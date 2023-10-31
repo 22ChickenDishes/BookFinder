@@ -67,7 +67,7 @@ namespace BookFinder.Servers
         public static void LoadAssmaly(string asmName)
         {
             Assembly assembly = Assembly.Load(asmName);
-        
+
             Type[] types = assembly.GetTypes();//注意这里获取的是程序集中的所有定义的类型
 
             // 筛选出含有IOcServiceAttribute特性标签的类，存储其type类型

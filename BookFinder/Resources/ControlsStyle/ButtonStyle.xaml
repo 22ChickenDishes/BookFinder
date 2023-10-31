@@ -180,9 +180,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="border" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" Background="Transparent" BorderThickness="0" 
-                            SnapsToDevicePixels="True">
-                        <Path x:Name="path" StrokeThickness="1" SnapsToDevicePixels="True" Stroke="{StaticResource ColorBrush_GrayContainerButton_AvailableStatus}">
+                    <Border  Width="32" Height="32" SnapsToDevicePixels="True">
+                        <Path x:Name="path" StrokeThickness="1" Stroke="{StaticResource ColorBrush_GrayContainerButton_AvailableStatus}">
                             <Path.Data>
                                 <GeometryGroup>
                                     <PathGeometry Figures="M15,4 18.8,1.6 "/>
@@ -199,7 +198,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger  Property="IsMouseOver" Value="True">
                             <Setter TargetName="path" Property="Stroke" Value="{StaticResource ResourceKey=ColorBrush_Subject_Purple}"/>
-                            <!--<Setter TargetName="path" Property="Fill" Value="{StaticResource ResourceKey=ColorBrush_Subject_Purple}" />-->
+                            <Setter TargetName="path" Property="Fill" Value="{StaticResource ResourceKey=ColorBrush_Subject_Purple}" />
                         </Trigger>
                         <Trigger  Property="IsEnabled" Value="True">
                             <Setter TargetName="path" Property="Stroke" Value="{StaticResource ResourceKey=ColorBrush_GrayContainerButton_UnavailableStatus}"/>
@@ -217,18 +216,22 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="border" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" Background="Transparent" BorderThickness="0" 
+                   
+                    Focusable="False"
+                    ToolTip="{StaticResource RestoreButtonToolTipContent}"
+                    UseLayoutRounding="True"
                             SnapsToDevicePixels="True">
                         <Path x:Name="path"
-                    Data="M5,5 27,27 M27,5 5,27"
+                    Data="M4,4 28,28 M28,4 4,28"
                     Stroke="{StaticResource ColorBrush_GrayContainerButton_AvailableStatus}"
                     
                     SnapsToDevicePixels="True"
-                    
+                    Stretch="Uniform"
                     StrokeThickness="1"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger  Property="IsMouseOver" Value="True">
-                            <Setter TargetName="path" Property="Stroke" Value="{StaticResource ResourceKey=ColorBrush_Subject_Purple}" />
+                            <Setter TargetName="path" Property="Stroke" Value="{StaticResource ResourceKey=ColorBrush_SubjectColor_DefaultWhite}" />
                             <Setter TargetName="path" Property="Fill" Value="{StaticResource ResourceKey=ColorBrush_Subject_Purple}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -248,16 +251,16 @@
                         <Path x:Name="path" Stroke="{StaticResource ColorBrush_GrayContainerButton_AvailableStatus}" Width="32" Height="32">
                             <Path.Data>
                                 <GeometryGroup>
-                                    <PathGeometry Figures="M21,22 29,29"/>
-                                    <EllipseGeometry Center="15,15" RadiusX="10" RadiusY="10"></EllipseGeometry>
+                                    <PathGeometry Figures="M23,24 30,30"/>
+                                    <EllipseGeometry Center="15,15" RadiusX="12" RadiusY="12"></EllipseGeometry>
                                 </GeometryGroup>
                             </Path.Data>
                         </Path>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger  Property="IsMouseOver" Value="True">
-                            <Setter TargetName="path" Property="Stroke" Value="{StaticResource ResourceKey=ColorBrush_Subject_Purple}" />
-                            <!--<Setter TargetName="path" Property="Fill" Value="{StaticResource ResourceKey=ColorBrush_Subject_Purple}"/>-->
+                            <Setter TargetName="path" Property="Stroke" Value="{StaticResource ResourceKey=ColorBrush_SubjectColor_DefaultWhite}" />
+                            <Setter TargetName="path" Property="Fill" Value="{StaticResource ResourceKey=ColorBrush_Subject_Purple}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

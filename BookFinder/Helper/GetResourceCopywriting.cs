@@ -9,7 +9,6 @@ namespace BookFinder.Helper
 {
     public static class GetResourceCopywriting
     {
-
         /// <summary>
         /// 获取多语言文案
         /// </summary>
@@ -17,7 +16,6 @@ namespace BookFinder.Helper
         /// <returns></returns>
         public static string GrtString(string resourceDictionaryName)
         {
-          
             string tem = null;
             ResourceDictionary resourceDictionary = App.Current.Resources.MergedDictionaries.First(x => x.Source.ToString() == $"{LanguageChangeHelper.enumLanguage.ToString()}.xaml");
             if (resourceDictionary.Contains(resourceDictionaryName))

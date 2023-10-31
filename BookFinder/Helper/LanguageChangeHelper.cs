@@ -14,6 +14,7 @@ namespace BookFinder.Helper
 
         public void ChangeLanguage(EnumLanguage oldEnumLanguage,EnumLanguage newEnumLanguage)
         {
+
             ResourceDictionary oldResourceDictionary = new ResourceDictionary()
             {
                 Source = new Uri($"{oldEnumLanguage.ToString()}.xaml", UriKind.RelativeOrAbsolute)
@@ -25,8 +26,8 @@ namespace BookFinder.Helper
             };
         
             Application.Current.Dispatcher.BeginInvoke(new Action(() => {
+                App.Current.Resources.MergedDictionaries.Remove(oldResourceDictionary);
                 App.Current.Resources.MergedDictionaries.Add(newResourceDictionary);
-                App.Current.Resources.MergedDictionaries.Remove(oldResourceDictionary);     
             }));
 
             enumLanguage = newEnumLanguage;

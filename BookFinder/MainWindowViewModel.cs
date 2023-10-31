@@ -77,20 +77,5 @@ namespace BookFinder
         {
             throw new NotImplementedException();
         }
-
-        public void NavigatePrevious()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void NavigateNext()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Test()
-        { 
-        
-        }
     }
 }

@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 using System.Windows.Media.Animation;
-using System.Reflection;
 
 namespace BookFinder.Helper
 {
@@ -23,42 +22,22 @@ namespace BookFinder.Helper
         /// </summary>
         private static string registryFileName = "SOFTWARE";
 
-        private static string ProductName { get {
-                Assembly assembly = Assembly.GetExecutingAssembly();
-                object[] objects = assembly.GetCustomAttributes(typeof(AssemblyProductAttribute), false);
-                if (objects.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyProductAttribute)objects[0]).Product;
-            } } 
-
         public static void CreateRegistFileAndValue(string key,string value)
         {
-           
             //RegistryView registryView =Environment.Is64BitOperatingSystem? RegistryView.Registry64 :  RegistryView.Registry32;
 
             //RegistryKey registry =  RegistryKey.OpenBaseKey(RegistryHive.LocalMachine , registryView);
 
             //+"\\SOFTWARE"
-            RegistryKey registry = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, registryView);
-           
+            RegistryKey registry = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, registryView);
             RegistryKey registry2 = registry.OpenSubKey(registryFileName, true);
-            if (registry2 == null)
-            {
-                registry2 = registry.CreateSubKey(registryFileName, true);
-                if (registry2 == null)
-                {
-                    return;
-                }
-            }
-            RegistryKey registry3 = registry2.CreateSubKey(ProductName, true);
+            RegistryKey registry3 = registry2.CreateSubKey("BookFinder", true);
             registry3.SetValue(key, value);
         }
 
         public static string ReadRegistryValue(string key)
         {
-            if (!IsRegeditItemExist(ProductName))
+            if (!IsRegeditItemExist("BookFinder"))
             {
                 return null;
             }
@@ -67,8 +46,8 @@ namespace BookFinder.Helper
                 return null;
             }
             string info = null;
-            RegistryKey registry = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, registryView);
-            RegistryKey myreg = registry.OpenSubKey(registryFileName).OpenSubKey(ProductName, true);
+            RegistryKey registry = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, registryView);
+            RegistryKey myreg = registry.OpenSubKey(registryFileName).OpenSubKey("BookFinder", true);
             info = myreg.GetValue(key).ToString();
             myreg.Close();
             return info;
@@ -76,7 +55,7 @@ namespace BookFinder.Helper
 
         public static void DeleRegistryValue(string key)
         {
-            if (!IsRegeditItemExist(ProductName))
+            if (!IsRegeditItemExist("BookFinder"))
             {
                 return;
             }
@@ -92,18 +71,9 @@ namespace BookFinder.Helper
         private static bool IsRegeditItemExist(string fileName)
         {
             string[] subkeyNames;
-            RegistryKey hkml = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, registryView);
+            RegistryKey hkml = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, registryView);
             //RegistryKey software = hkml.OpenSubKey(SOFTWARE);
             RegistryKey software = hkml.OpenSubKey(registryFileName, true);
-            if (software == null)
-            {
-                CreateRegistFileAndValue(fileName, "");
-                software = hkml.OpenSubKey(registryFileName, true);
-                if (software == null)
-                { 
-                    return false;
-                }
-            }
             subkeyNames = software.GetSubKeyNames();
             //取得该项下所有子项的名称的序列，并传递给预定的数组中  
             foreach (string keyName in subkeyNames) //遍历整个数组
@@ -122,7 +92,7 @@ namespace BookFinder.Helper
         private static bool IsRegeditKeyExit(string key)
         {
             string[] subkeyNames;
-            RegistryKey hkml = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, registryView);
+            RegistryKey hkml = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, registryView);
             //RegistryKey software = hkml.OpenSubKey(SOFTWAREtest);
             RegistryKey software = hkml.OpenSubKey(registryFileName, true);
             subkeyNames = software.GetValueNames();
