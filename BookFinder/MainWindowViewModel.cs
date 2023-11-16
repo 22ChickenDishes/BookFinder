@@ -32,6 +32,11 @@ namespace BookFinder
 
         public string CurrentPageKey => throw new NotImplementedException();
 
+        public void GitTest()
+        { 
+            // git改变
+        }
+
         public void OnViewLoaded(object view)
         {
              _View = view as MainWindow;
