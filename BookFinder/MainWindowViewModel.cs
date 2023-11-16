@@ -49,10 +49,16 @@ namespace BookFinder
             // git改变
         }
 
+
+        public void Test2()
+        { 
+            // 变基2
+        }
+
         public void Test()
         { 
-        
-            // 变 变 变
+            
+
         }
 
         public void OnViewLoaded(object view)
@@ -111,9 +117,6 @@ namespace BookFinder
             throw new NotImplementedException();
         }
 
-        public void Test()
-        { 
-        
-        }
+     
     }
 }
