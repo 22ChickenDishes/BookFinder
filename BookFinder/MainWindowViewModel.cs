@@ -33,10 +33,15 @@ namespace BookFinder
         public string CurrentPageKey => throw new NotImplementedException();
 
 
+
         public void GitDevT()
-        { 
-        
+        {
             // git Dev 提交
+        }
+
+        public void GitTest()
+        { 
+            // git改变
         }
 
         public void OnViewLoaded(object view)
