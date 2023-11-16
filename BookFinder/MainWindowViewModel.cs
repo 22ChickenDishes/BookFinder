@@ -52,6 +52,11 @@ namespace BookFinder
             // git改变
         }
 
+        public void Test2()
+        { 
+            // 变基2
+        }
+
         public void OnViewLoaded(object view)
         {
              _View = view as MainWindow;
