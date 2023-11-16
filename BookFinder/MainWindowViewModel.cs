@@ -37,6 +37,11 @@ namespace BookFinder
             // dev 变基
         }
 
+        public void UnchangedGit() { 
+        
+            // feature 变基
+        }
+
         public void GitDevT()
         {
             // git Dev 提交
