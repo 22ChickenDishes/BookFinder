@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 
 namespace BookFinder
 {
-    public class MainWindowViewModel:ObservableObject,INavigationService
+    public class MainWindowViewModel : ObservableObject, INavigationService
     {
         private MainWindow _View;
 
@@ -31,6 +31,13 @@ namespace BookFinder
         public RelayCommand WindowMinimizeCommand => new RelayCommand(WindowMinimize);
 
         public string CurrentPageKey => throw new NotImplementedException();
+
+
+        public void GitDevT()
+        { 
+        
+            // git Dev 提交
+        }
 
         public void OnViewLoaded(object view)
         {
